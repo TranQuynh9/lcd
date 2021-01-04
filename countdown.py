@@ -11,7 +11,7 @@ def countdown(num_line=1, num_cols=16):
     # Countdown end of the year
     countdown = str(
         datetime(datetime.now().year, 12, 31, 23, 59, 59) - datetime.now()
-    ).replace(',', '')
+    ).replace(' days, ', ':')
     display.lcd_display_string(countdown[: countdown.find(".")], num_line)
 
 
